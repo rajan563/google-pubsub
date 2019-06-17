@@ -18,7 +18,7 @@ public class CamelGooglePubsubRouteBuilder extends RouteBuilder{
 	@Override
 	public void configure() throws Exception {
 		
-		
+		 
 		from("timer://foo?period=5s")
 		.log("working")
 		.setBody().simple("Hi from Rajan ${date:now:yyyy-MM-dd yyyy-MM-dd}")
